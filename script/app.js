@@ -56,5 +56,9 @@ document.getElementById("button-submit").addEventListener("click", function () {
     const leftMessage = parseInt(leftMessageString);
     const newLeftMessage = leftMessage - 1;
     leftMessageField.innerText = newLeftMessage;
+    if (newLeftMessage < 1) {
+      document.getElementById("typed-numbers").disabled = true;
+      document.getElementById("button-submit").disabled = true;
+    }
   }
 });
